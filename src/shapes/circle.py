@@ -1,0 +1,17 @@
+import math
+
+from src.shapes.base_shape import Shapes
+
+class Circle(Shapes):
+
+    def __init__(self, radius:float):
+       self.radius = radius
+
+    def area(self)->float:
+        return self.radius * self.radius * math.pi
+
+
+    def perimeter(self)->float:
+        return 2*math.pi*self.radius
+
+

@@ -1,0 +1,16 @@
+{
+	"shapeTypes" : [
+		{
+			"type" : "circle",
+			"params" : [10]
+		},
+		{
+			"type" : "rectangle",
+			"params" : [10,12]
+		},
+		{
+			"type" : "circle",
+			"params" : [20]
+		}
+	]
+}
