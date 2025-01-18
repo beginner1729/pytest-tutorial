@@ -3,6 +3,7 @@ from src.shapes.base_shape import Shapes
 class Rectangle(Shapes):
 
     def __init__(self, length:float, breadth:float):
+        super().__init__(length, breadth)
         self.length = length
         self.breadth = breadth
 

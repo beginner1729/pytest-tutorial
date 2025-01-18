@@ -5,7 +5,8 @@ from src.shapes.base_shape import Shapes
 class Circle(Shapes):
 
     def __init__(self, radius:float):
-       self.radius = radius
+        super().__init__(radius)
+        self.radius = radius
 
     def area(self)->float:
         return self.radius * self.radius * math.pi
