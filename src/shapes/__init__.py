@@ -50,4 +50,3 @@ base_subclasses = [(cls_name.lower(), cls) \
 shape_registry_mapping = dict(
   base_subclasses
 )
-print(shape_registry_mapping)
