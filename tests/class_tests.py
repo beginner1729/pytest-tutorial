@@ -1,3 +1,4 @@
+import sys
 import pytest
 import math
 import json
@@ -37,7 +38,6 @@ class TestShapes():
         })
 
         request_json = request_data('testurl')
-        print(type(request_json))
         shape_objs = process_data_to_objs(
             request_json)
 
@@ -48,7 +48,23 @@ class TestShapes():
     def test_compute(self):
         pass
 
-    @pytest.mark.xfail(reason="This feature is not implemented yet")
-    def test_fail(self):
+    @pytest.mark.skip(reason="This feature is not implemented yet")
+    def test_skip(self):
         assert self.circle.dimension == 2
 
+
+    @pytest.mark.skipif(sys.version_info[0] > 2,
+                        reason="Requires Python 2")
+    def test_python27_print(self):
+        eval('print "printing in python 27"')
+        assert True
+
+    @pytest.mark.slow
+    def test_my_slow_function(self):
+        import time
+        time.sleep(10)
+        assert True
+
+    @pytest.mark.xfail(reason='this test must fail', strict=True)
+    def test_circle_diff(self):
+        assert Circle(11).area() < self.circle.area()
