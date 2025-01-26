@@ -2,7 +2,7 @@ class Shapes():
     def __init__(self, *args):
 
         for arg in args:
-            if type(arg) is int and arg > 0:
+            if (type(arg) is int or type(arg) is float) and arg > 0:
                 continue
             raise ValueError
 
