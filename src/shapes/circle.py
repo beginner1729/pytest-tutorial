@@ -15,4 +15,6 @@ class Circle(Shape):
     def perimeter(self)->float:
         return 2*math.pi*self.radius
 
+    def arc_length(self, arc_length:float):
+        raise NotImplementedError
 
