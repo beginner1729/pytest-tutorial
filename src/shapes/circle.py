@@ -1,8 +1,8 @@
 import math
 
-from src.shapes.base_shape import Shapes
+from src.shapes.base_shape import Shape
 
-class Circle(Shapes):
+class Circle(Shape):
 
     def __init__(self, radius:float):
         super().__init__(radius)

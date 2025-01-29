@@ -1,4 +1,4 @@
-class Shapes():
+class Shape():
     def __init__(self, *args):
 
         for arg in args:

@@ -5,7 +5,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-from src.shapes.base_shape import Shapes
+from src.shapes.base_shape import Shape
 
 
 def list_classes_in_package(package_name):
@@ -44,7 +44,7 @@ class_list = list_classes_in_package(package_name)
 
 base_subclasses = [(cls_name.lower(), cls) \
                    for cls_name, cls in class_list if issubclass(
-  cls,Shapes)
+  cls,Shape)
 ]
 
 shape_registry_mapping = dict(

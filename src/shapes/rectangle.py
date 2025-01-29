@@ -1,6 +1,6 @@
-from src.shapes.base_shape import Shapes
+from src.shapes.base_shape import Shape
 
-class Rectangle(Shapes):
+class Rectangle(Shape):
 
     def __init__(self, length:float, breadth:float):
         super().__init__(length, breadth)

@@ -68,3 +68,19 @@ class TestShapes():
     @pytest.mark.xfail(reason='this test must fail', strict=True)
     def test_circle_diff(self):
         assert Circle(11).area() < self.circle.area()
+
+
+    @pytest.mark.parametrize(
+        "length, breadth, area",
+        [
+            (10, 10, 100),  # Test case 1
+            (10, 20, 20),  # Test case 2 incorrect
+            (1, 1, 2),  # Test case 3 incorrect
+        ],
+    )
+    def test_rectangle_area(self, length, breadth, area):
+        rectangle = Rectangle(length, breadth)
+
+        assert area == rectangle.area()
+
+
